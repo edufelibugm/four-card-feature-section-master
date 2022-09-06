@@ -1,0 +1,192 @@
+.colors {
+    /* ### Primary */
+    color: hsl(0, 78%, 62%); /*Red*/
+    color: hsl(180, 62%, 55%); /*Cyan*/
+    color: hsl(34, 97%, 64%); /*Orange*/
+    color: hsl(212, 86%, 64%); /*Blue*/
+
+    /* ### Neutral */
+    color: hsl(234, 12%, 34%); /*Very Dark Blue*/
+    color: hsl(229, 6%, 66%); /*Grayish Blue*/
+    color: hsl(0, 0%, 98%); /*Very Light Gray*/
+}
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/*
+    font-family: 'Poppins', sans-serif;
+*/
+
+/* GENERAL */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+}
+
+h1 {
+    color: hsl(234, 12%, 34%);
+}
+
+h2 {
+    font-size: 15px;
+    color: hsl(234, 12%, 34%);
+}
+
+p {
+    font-size: 13px;
+    color: hsl(229, 6%, 66%);
+}
+
+
+
+/* SPECIFY */
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 85px;
+    gap: 15px;
+}
+    header h1:first-of-type {
+        font-weight: 200;
+    }
+    header p {
+        width: 460px;
+        font-size: 15px;
+    }
+
+.cards {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+    .cards div {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .cards .card {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 10px 20px hsla(234, 12%, 34%, 0.586);
+        padding: 35px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition: .5s;
+    }
+        .cards .card p {
+            width: 250px;
+        }
+        /*-----------------------------------------------*/
+        .cards .card.one {
+            border-top: hsl(180, 62%, 55%) solid 4px;
+        }
+        .cards .card.two {
+            border-top: hsl(0, 78%, 62%) solid 4px;
+        }
+        .cards .card.three {
+            border-top: hsl(34, 97%, 64%) solid 4px;
+        }
+        .cards .card.four {
+            border-top: hsl(212, 86%, 64%) solid 4px;
+        }
+        /*-----------------------------------------------*/
+        .cards .card div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+        }
+            .cards .card div img {
+                height: 65px;
+                width: 65px;
+            }
+            /*---------------------------------------------*/
+            .cards .card:hover {
+                transform: translateY(-15px);
+                transition: .5s;
+            }
+                .cards .card.one:hover {
+                    background: hsla(180, 62%, 55%, 0.4);
+                    transition: .5s;
+                }
+                .cards .card.two:hover {
+                    background: hsla(0, 78%, 62%, 0.4);
+                    transition: .5s;
+                }
+                .cards .card.three:hover {
+                    background: hsla(34, 97%, 64%, 0.4);
+                    transition: .5s;
+                }
+                .cards .card.four:hover {
+                    background: hsla(212, 86%, 64%, 0.4);
+                    transition: .5s;
+                }
+            /*---------------------------------------------*/
+
+@media (max-width: 1110px) {
+    .cards {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+}
+@media (max-width: 425px) {
+    main {
+        flex-direction: column;
+        gap: 75px;
+    }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        header p {
+            width: 295px;
+        }
+
+        .cards .card {
+            max-width: 315px;
+            height: 250px;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 10px 20px hsla(234, 12%, 34%, 0.586);
+            padding: 35px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: .5s;
+        }
+}
